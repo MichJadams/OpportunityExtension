@@ -1,0 +1,23 @@
+body {
+    width: 700px;
+    height: 500px;
+    display: grid;
+    justify-content: center;
+}
+
+#opportunityForm {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+}
+
+input {
+    width: 600px;
+    padding: 10px;
+    margin: 5px;
+
+}
+
+#submitBtn {
+    width: 60px;
+}

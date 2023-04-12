@@ -1,0 +1,66 @@
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+    <h1>Prepare your sacrifice.</h1>
+    <h3 id="welcome-banner"></h3>
+    <h3 id="fake-console"></h3>
+    <div class="resume-upload-container">
+        <form action="" id="resume-upload-form">
+
+            <label for="userResume">Your Resumes</label>
+            <input type="text" id="userResume" name="userResume" />  
+
+            <label for="resumeInputFields">Resume Input fields</label>
+            <input list="resumeInputs" id="resumeInputFields" name="resumeInputFields" /> 
+            <datalist id="resumeInputs"></datalist>
+            
+
+        </form>
+    </div>
+    <h3 class="login-container">
+        <form action="" id="loginForm">
+            <label for="userName">UserName</label>
+            <input type="text" id="userName" name="userName" />
+    
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" />
+
+            <button type="submit" onsubmit="login" id="loginButton">Login?</button>
+        </form>
+    </h3>
+    <h3 id="status"> Final edits? </h3>
+    <form action="" id="opportunityForm">
+        <label for="jobTitle">Select one of the possible job titles
+            <input list="jobTitles" name="title" /></label>
+            <datalist id="jobTitles"></datalist>
+
+        <label for="jobUrl">Job Url</label>
+        <input type="text" id="jobUrl" name="url" />
+
+        <label for="dateApplied">Date Applied</label>
+        <input type="date" id="dateApplied" name="date_applied" />
+
+        <label for="description">Role Description</label>
+        <input type="text" id="description" name="role_description" />
+
+        <label for="notes">Notes</label>
+        <input type="text" id="notes" name="notes" />
+
+        <label for="status">Application Status</label>
+        <select id="status" name="application_status">
+            <option value="going_to_apply">Going to Apply</option>
+            <option value="applied">Applied</option>
+            <option value="partial_application">Partial Application</option>
+        </select>
+
+        <button id="submitBtn" type="submit" onsubmit="submitOpportunity">Submit</button>
+    </form>
+</body>
+
+<script type="module" src="../ContentWorkers/popup.js"></script>
+
+</html>
